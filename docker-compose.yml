@@ -1,0 +1,16 @@
+version: "2.2"
+
+services:
+  desktop:
+    image: mastrogeppetto/labssw:latest
+    container_name: sswlab
+    hostname: desktop
+    privileged: true  # needed to run wireshark
+    ports:
+      - "6080:6080"
+    volumes:
+      - ./shared:/home/user/Desktop/shared
+      - ./ssh-keys/desktop:/home/user/.ssh
+    environment:
+      - USER=user
+      - PASSWORD=user
