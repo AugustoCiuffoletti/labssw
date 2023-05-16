@@ -2,7 +2,7 @@ version: "2.2"
 
 services:
   desktop:
-    image: mastrogeppetto/labssw:latest
+    image: mastrogeppetto/labssw:amd64-latest
     container_name: sswlab
     hostname: desktop
     privileged: true  # needed to run wireshark
